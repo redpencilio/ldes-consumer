@@ -1,0 +1,23 @@
+{
+  "name": "ldes-consumer",
+  "version": "0.0.1",
+  "description": "LDES Consumer package",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redpencilio/ldes-consumer.git"
+  },
+  "author": "redpencilio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redpencilio/ldes-consumer/issues"
+  },
+  "homepage": "https://github.com/redpencilio/ldes-consumer#readme",
+  "dependencies": {
+    "@treecg/actor-init-ldes-client": "^2.6.0",
+    "rdf-js": "^4.0.2"
+  }
+}
