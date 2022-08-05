@@ -1,28 +1,32 @@
 {
-  "name": "ldes-consumer",
-  "version": "0.0.1",
-  "description": "LDES Consumer package",
-  "main": "build/consumer.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/redpencilio/ldes-consumer.git"
-  },
-  "author": "redpencilio",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/redpencilio/ldes-consumer/issues"
-  },
-  "homepage": "https://github.com/redpencilio/ldes-consumer#readme",
-  "dependencies": {
-    "@treecg/actor-init-ldes-client": "^2.6.0",
-    "rdf-js": "^4.0.2"
-  },
-  "devDependencies": {
-    "typescript": "^4.7.4"
-  }
+	"name": "ldes-consumer",
+	"version": "0.0.1",
+	"description": "LDES Consumer package",
+	"main": "lib/consumer.js",
+	"files": [
+		"lib/**/*.d.ts",
+		"lib/**/*.js"
+	],
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/redpencilio/ldes-consumer.git"
+	},
+	"author": "redpencilio",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/redpencilio/ldes-consumer/issues"
+	},
+	"homepage": "https://github.com/redpencilio/ldes-consumer#readme",
+	"dependencies": {
+		"@treecg/actor-init-ldes-client": "^2.6.0",
+		"rdf-js": "^4.0.2"
+	},
+	"devDependencies": {
+		"typescript": "^4.7.4"
+	}
 }
