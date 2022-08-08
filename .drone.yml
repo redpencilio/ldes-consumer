@@ -3,6 +3,10 @@ kind: pipeline
 type: docker
 name: release
 steps:
+- name: npm-install
+  image: plugins/npm
+  commands:
+    - npm install
 - name: npm-release
   image: plugins/npm
   settings:
@@ -11,7 +15,6 @@ steps:
 trigger:
   event:
     - tag
-
 ---
 
 kind: secret
