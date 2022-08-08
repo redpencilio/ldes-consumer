@@ -1,0 +1,26 @@
+---
+kind: pipeline
+type: docker
+name: release
+steps:
+- name: npm-release
+  image: plugins/npm
+  settings:
+    token:
+      from_secret: npm_access_token
+trigger:
+  event:
+    - tag
+
+---
+
+kind: secret
+name: npm_access_token
+data: AClCoEFJItPZn5CNSLKrK7T6iPgloQrDMDw3GPMqgpgxo5sXeLqac2uYAIMMi5q5kcApbloK+/mkXhOBO/Dm+NnqAQI=
+
+---
+
+kind: secret
+name: npm_access_token
+data: d482f48ca2672533ff1421612a78cb9fba8c6a7129ca252f353d4b0d6eb2cc61
+...
