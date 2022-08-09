@@ -47,18 +47,25 @@ export default class Consumer {
 			this.currentPage = metadata.url;
 		});
 		stream.on("data", async (member: Member) => {
-			const timestamp = extractTimeStamp(member);
-			if (!this.currentTimeStamp || timestamp > this.currentTimeStamp) {
-				this.currentTimeStamp = timestamp;
+			try {
+				const timestamp = extractTimeStamp(member);
+				if (
+					!this.currentTimeStamp ||
+					timestamp > this.currentTimeStamp
+				) {
+					this.currentTimeStamp = timestamp;
+				}
+				await UPDATE_QUEUE.push(async () =>
+					callback(member, {
+						timestamp: this.currentTimeStamp!,
+						page: this.currentPage,
+					})
+				);
+			} catch (e) {
+				console.error(e);
 			}
-			await UPDATE_QUEUE.push(async () =>
-				callback(member, {
-					timestamp: this.currentTimeStamp!,
-					page: this.currentPage,
-				})
-			);
 		});
-    stream.on("error", console.error)
-    stream.on("end", onFinish);
+		stream.on("error", console.error);
+		stream.on("end", onFinish);
 	}
 }
