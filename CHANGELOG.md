@@ -1,4 +1,13 @@
 
+
+## 0.1.4 (2022-09-09)
+
+#### :bug: Bug Fix
+* [#2](https://github.com/redpencilio/ldes-consumer/pull/2) Fix external context resolving ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 0.1.3 (2022-08-09)
 
 #### :bug: Bug Fix
