@@ -2,8 +2,10 @@ import { newEngine, LDESClient } from "@treecg/actor-init-ldes-client";
 import * as RDF from "rdf-js";
 import PromiseQueue from "./promise-queue";
 import { extractTimeStamp } from "./utils";
+import { OutgoingHttpHeaders } from 'http';
 export type ConsumerArgs = {
 	endpoint: string;
+	requestHeaders?: {[key: string]: number | string | string[]};
 	initialState?: State;
 };
 
@@ -20,15 +22,18 @@ const UPDATE_QUEUE: PromiseQueue<void> = new PromiseQueue<void>();
 
 export default class Consumer {
 	private client: LDESClient;
+	private requestHeaders: {[key: string]: number | string | string[]};
 	private startPage: string;
 	private startTimeStamp?: Date;
 	private currentPage: string;
 	private currentTimeStamp?: Date;
-	constructor({ endpoint, initialState }: ConsumerArgs) {
+
+	constructor({ endpoint, initialState, requestHeaders }: ConsumerArgs) {
 		this.startTimeStamp = initialState?.timestamp;
 		this.currentTimeStamp = initialState?.timestamp;
 		this.startPage = initialState?.page ?? endpoint;
 		this.currentPage = initialState?.page ?? endpoint;
+		this.requestHeaders = requestHeaders ?? {};
 		this.client = newEngine();
 	}
 
@@ -39,6 +44,7 @@ export default class Consumer {
 		const stream = this.client.createReadStream(this.startPage, {
 			representation: "Quads",
 			mimeType: "application/ld+json",
+			requestHeaders: this.requestHeaders,
 			emitMemberOnce: true,
 			fromTime: this.startTimeStamp,
 			disableSynchronization: true,
