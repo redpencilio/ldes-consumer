@@ -1,5 +1,14 @@
 
 
+
+## 0.2.0 (2022-09-16)
+
+#### :rocket: Enhancement
+* [#3](https://github.com/redpencilio/ldes-consumer/pull/3) Add support for passing custom http request headers ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 0.1.4 (2022-09-09)
 
 #### :bug: Bug Fix

@@ -1,6 +1,6 @@
 {
 	"name": "ldes-consumer",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"description": "LDES Consumer package",
 	"main": "lib/consumer.js",
 	"files": [
@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"release-it": "^15.2.0",
 		"release-it-lerna-changelog": "^5.0.0",
-    "typescript": "^4.7.4"
+		"typescript": "^4.7.4"
 	},
 	"overrides": {
 		"@treecg/actor-init-ldes-client": {
