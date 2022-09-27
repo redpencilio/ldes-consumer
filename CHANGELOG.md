@@ -2,6 +2,15 @@
 
 
 
+
+## 0.3.1 (2022-09-27)
+
+#### :house: Internal
+* [#5](https://github.com/redpencilio/ldes-consumer/pull/5) Add on finish callback to promise queue ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 0.3.0 (2022-09-27)
 
 #### :rocket: Enhancement
