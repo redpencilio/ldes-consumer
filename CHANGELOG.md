@@ -4,6 +4,15 @@
 
 
 
+
+## 0.3.4 (2022-09-28)
+
+#### :bug: Bug Fix
+* [#7](https://github.com/redpencilio/ldes-consumer/pull/7) Use pausing fix from event-stream-client release ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 0.3.3 (2022-09-28)
 
 ## 0.3.2 (2022-09-28)
