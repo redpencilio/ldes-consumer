@@ -3,6 +3,15 @@
 
 
 
+
+## 0.3.2 (2022-09-28)
+
+#### :house: Internal
+* [#6](https://github.com/redpencilio/ldes-consumer/pull/6) Ensure exported state is complete ([@elpoelma](https://github.com/elpoelma))
+
+#### Committers: 1
+- Elena Poelman ([@elpoelma](https://github.com/elpoelma))
+
 ## 0.3.1 (2022-09-27)
 
 #### :house: Internal
