@@ -1,6 +1,6 @@
 {
 	"name": "ldes-consumer",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"description": "LDES Consumer package",
 	"main": "lib/consumer.js",
 	"files": [
