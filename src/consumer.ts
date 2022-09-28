@@ -57,5 +57,8 @@ export default class Consumer {
     stream.on("pause", async () => {
       await UPDATE_QUEUE.push(async () => onFinish(stream.exportState()));
     });
+    stream.on("end", async () => {
+      await UPDATE_QUEUE.push(async () => onFinish(stream.exportState()));
+    })
   }
 }
