@@ -38,7 +38,7 @@ export default class Consumer {
         mimeType: "application/ld+json",
         requestHeaders: this.requestHeaders,
         emitMemberOnce: true,
-        disableSynchronization: true,
+        disableSynchronization: false,
       },
       this.initialState
     );
@@ -50,8 +50,11 @@ export default class Consumer {
         console.error(e);
       }
     });
+    stream.on('now only syncing', () => {
+      stream.pause();
+  });
     stream.on("error", console.error);
-    stream.on("end", async () => {
+    stream.on("pause", async () => {
       await UPDATE_QUEUE.push(async () => onFinish(stream.exportState()));
     });
   }
