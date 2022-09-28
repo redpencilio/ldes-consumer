@@ -24,7 +24,7 @@
 	},
 	"homepage": "https://github.com/redpencilio/ldes-consumer#readme",
 	"dependencies": {
-		"@treecg/actor-init-ldes-client": "https://github.com/redpencilio/event-stream-client/releases/download/actor-init-ldes-client-v3.0.0-feat-headers/treecg-actor-init-ldes-client-3.0.0.tgz",
+		"@treecg/actor-init-ldes-client": "https://github.com/redpencilio/event-stream-client/releases/download/actor-init-ldes-client-v3.0.0-fix-pausing/treecg-actor-init-ldes-client-3.0.0.tgz",
 		"rdf-js": "^4.0.2"
 	},
 	"devDependencies": {

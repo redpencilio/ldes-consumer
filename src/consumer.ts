@@ -52,11 +52,11 @@ export default class Consumer {
     });
     stream.on('now only syncing', () => {
       stream.pause();
-  });
+    });
     stream.on("error", console.error);
     stream.on("pause", async () => {
       await UPDATE_QUEUE.push(async () => onFinish(stream.exportState()));
-    });
+    })
     stream.on("end", async () => {
       await UPDATE_QUEUE.push(async () => onFinish(stream.exportState()));
     })
