@@ -4,14 +4,17 @@ type: docker
 name: release
 steps:
 - name: npm-install
-  image: plugins/npm
+  image: node:16
   commands:
-    - npm install
+    - npm ci
 - name: npm-release
-  image: plugins/npm
-  settings:
-    token:
+  image: node:16
+  environment:
+    ACCESS_TOKEN:
       from_secret: npm_access_token
+  commands:
+    - "echo //registry.npmjs.org/:_authToken=$ACCESS_TOKEN > .npmrc"
+    - npm publish
 trigger:
   event:
     - tag
