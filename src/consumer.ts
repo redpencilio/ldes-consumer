@@ -29,7 +29,7 @@ export default class Consumer {
   private requestHeaders: { [key: string]: number | string | string[] };
   private endpoint: string;
   private initialState: State | undefined;
-  private ldesOptions : LDESOptions;
+  private ldesOptions : LDESOptions | undefined;
 
   constructor({ endpoint, initialState, requestHeaders, ldesOptions }: ConsumerArgs) {
     this.endpoint = endpoint;
