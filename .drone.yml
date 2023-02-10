@@ -4,9 +4,9 @@ type: docker
 name: release
 steps:
 - name: npm-install
-  image: plugins/npm
+  image: node:16
   commands:
-    - npm install
+    - npm ci
 - name: npm-release
   image: plugins/npm
   settings:
