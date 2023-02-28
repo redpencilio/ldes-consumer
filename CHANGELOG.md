@@ -5,6 +5,16 @@
 
 
 
+
+## 0.4.0 (2023-02-28)
+
+#### :rocket: Enhancement
+* [#8](https://github.com/redpencilio/ldes-consumer/pull/8) make some ldes options configurable ([@nvdk](https://github.com/nvdk))
+
+#### Committers: 1
+- Niels V ([@nvdk](https://github.com/nvdk))
+
+
 ## 0.3.5 (2022-09-28)
 
 ## 0.3.4 (2022-09-28)
